@@ -19,6 +19,18 @@ export async function ensureSchema() {
   `;
 }
 
+export async function ensureChatTable() {
+  if (!hasDatabase) return;
+  const sql = getDb();
+  await sql`
+    CREATE TABLE IF NOT EXISTS kopedu_chat (
+      user_id    TEXT PRIMARY KEY,
+      data       JSONB NOT NULL,
+      updated_at TIMESTAMPTZ DEFAULT NOW()
+    )
+  `;
+}
+
 export async function ensureCertificatesTable() {
   if (!hasDatabase) return;
   const sql = getDb();

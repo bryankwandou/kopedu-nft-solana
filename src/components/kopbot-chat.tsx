@@ -3,13 +3,15 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { chatSuggestions } from "@/lib/data";
-import { recordActivity } from "@/lib/progress";
+import { recordActivity, useProgress } from "@/lib/progress";
 import {
   loadStore,
   saveStore,
   newSession,
   nowTime,
   groupSessions,
+  fetchChatFromCloud,
+  scheduleSyncChatToCloud,
   type ChatSession,
   type StoredMsg,
 } from "@/lib/chat-store";
@@ -159,6 +161,7 @@ function HistorySidebar({
 /* ------------------------------------------------------------------ */
 
 export function KopbotChat() {
+  const progress = useProgress();
   const [sessions, setSessions] = React.useState<ChatSession[]>([]);
   const [activeId, setActiveId] = React.useState("");
   const [input, setInput] = React.useState("");
@@ -181,11 +184,35 @@ export function KopbotChat() {
     setHydrated(true);
   }, []);
 
+  // Setelah userId siap, tarik riwayat dari cloud — pakai yang lebih baru
+  // dibanding localStorage supaya riwayat ikut akun lintas device.
+  React.useEffect(() => {
+    if (!hydrated || !progress.userId) return;
+    let cancelled = false;
+    fetchChatFromCloud(progress.userId).then((cloud) => {
+      if (cancelled || !cloud) return;
+      const localUpdatedAt = loadStore().updatedAt ?? 0;
+      if ((cloud.updatedAt ?? 0) > localUpdatedAt && cloud.sessions.length > 0) {
+        setSessions(cloud.sessions);
+        const validId =
+          cloud.activeId && cloud.sessions.find((s) => s.id === cloud.activeId)
+            ? cloud.activeId
+            : cloud.sessions[0].id;
+        setActiveId(validId);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hydrated, progress.userId]);
+
   // Persist on every change (after hydration to avoid overwriting on mount)
   React.useEffect(() => {
     if (!hydrated) return;
     saveStore(sessions, activeId);
-  }, [sessions, activeId, hydrated]);
+    scheduleSyncChatToCloud(progress.userId, sessions, activeId);
+  }, [sessions, activeId, hydrated, progress.userId]);
 
   const activeSession = sessions.find((s) => s.id === activeId) ?? null;
   const messages = activeSession?.messages ?? [];
