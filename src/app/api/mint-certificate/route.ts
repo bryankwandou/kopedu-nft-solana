@@ -108,7 +108,7 @@ export async function POST(req: Request) {
       asset,
       collection,
       owner: umiPublicKey(walletAddress),
-      name: `Sertifikat KopEdu — ${cert}`,
+      name: `Sertifikat KopEdu - ${cert}`,
       uri,
     }).sendAndConfirm(umi);
 

@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
                 color: "#7c3aed",
               }}
             >
-              SERTIFIKAT ON-CHAIN &middot; SOLANA
+              SERTIFIKAT ON-CHAIN · SOLANA
             </div>
 
             {/* Divider */}
@@ -181,7 +181,7 @@ export async function GET(req: NextRequest) {
                   color: "#7c3aed",
                 }}
               >
-                {modul} Modul &middot; Platform KopEdu
+                {modul} Modul · Platform KopEdu
               </div>
             </div>
 

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
 /**
  * Metadata JSON standar Metaplex (Token Metadata 1.1) untuk NFT sertifikat.
@@ -20,8 +20,11 @@ export async function GET(req: NextRequest) {
     tanggal
   )}`;
 
-  return NextResponse.json({
-    name: `Sertifikat KopEdu — ${certId}`,
+  // Karakter dibatasi ASCII murni di JSON on-chain (tanpa em dash/simbol non-ASCII):
+  // beberapa indexer NFT (DAS) salah membaca UTF-8 multi-byte sebagai Latin-1,
+  // menghasilkan mojibake pada field "name"/atribut saat dibaca ulang oleh wallet.
+  const body = {
+    name: `Sertifikat KopEdu - ${certId}`,
     symbol: "KOPEDU",
     description: `Sertifikat penyelesaian kurikulum Literasi Dasar Koperasi Indonesia (${modul} modul) di platform KopEdu, diberikan kepada ${nama}. ID sertifikat: ${certId}. Diterbitkan on-chain di Solana sebagai bukti belajar yang permanen dan dapat diverifikasi siapa pun.`,
     image: imageUrl,
@@ -32,7 +35,7 @@ export async function GET(req: NextRequest) {
       { trait_type: "Program", value: "Literasi Dasar Koperasi Indonesia" },
       { trait_type: "Jumlah Modul", value: modul },
       { trait_type: "ID Sertifikat", value: certId },
-      { trait_type: "Penerbit", value: "KopEdu — GotongDigital" },
+      { trait_type: "Penerbit", value: "KopEdu - GotongDigital" },
       { trait_type: "Jaringan", value: "Solana" },
     ],
     properties: {
@@ -45,5 +48,9 @@ export async function GET(req: NextRequest) {
         },
       ],
     },
+  };
+
+  return new Response(JSON.stringify(body), {
+    headers: { "Content-Type": "application/json; charset=utf-8" },
   });
 }
