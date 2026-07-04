@@ -45,7 +45,7 @@ function Cluster() {
   });
 
   const coins = React.useMemo(() => {
-    const greens = ["#9945ff", "#40916C", "#cdb4ff", "#52B788"];
+    const greens = ["#7c3aed", "#40916C", "#cdb4ff", "#52B788"];
     const out: {
       position: [number, number, number];
       color: string;
@@ -78,7 +78,7 @@ function Cluster() {
       <Float speed={2} rotationIntensity={1} floatIntensity={1.2}>
         <mesh castShadow>
           <torusGeometry args={[0.85, 0.13, 24, 80]} />
-          <meshStandardMaterial color="#9945ff" metalness={0.5} roughness={0.25} />
+          <meshStandardMaterial color="#7c3aed" metalness={0.5} roughness={0.25} />
         </mesh>
       </Float>
     </group>
@@ -99,7 +99,7 @@ function Scene() {
         size={2}
         speed={0.3}
         opacity={0.5}
-        color="#9945ff"
+        color="#7c3aed"
       />
       <AdaptiveDpr pixelated />
     </>

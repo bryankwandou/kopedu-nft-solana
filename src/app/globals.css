@@ -40,32 +40,32 @@
 }
 
 :root {
-  /* KopEdu Web3 — Solana night palette */
-  --background: #0a0910; /* deep space */
-  --foreground: #f2f0fa; /* near-white lavender */
-  --ink: #f2f0fa;
-  --ink-2: #a09cb8; /* secondary text */
-  --line: #241f36; /* hairline border */
+  /* KopEdu Web3 — light editorial palette (seperti sumber) + aksen Solana */
+  --background: #f7f5f0; /* warm cream */
+  --foreground: #1c1b22; /* near-black */
+  --ink: #1c1b22;
+  --ink-2: #6b6875; /* secondary text */
+  --line: #e6e2ee; /* hairline border */
 
-  --card: #131020;
-  --card-foreground: #f2f0fa;
-  --popover: #131020;
-  --popover-foreground: #f2f0fa;
+  --card: #ffffff;
+  --card-foreground: #1c1b22;
+  --popover: #ffffff;
+  --popover-foreground: #1c1b22;
 
-  --primary: #9945ff; /* solana purple */
+  --primary: #7c3aed; /* solana violet, readable on white */
   --primary-foreground: #ffffff;
-  --secondary: #131020;
-  --secondary-foreground: #f2f0fa;
-  --muted: #1a1628;
-  --muted-foreground: #a09cb8;
-  --accent: #14f195; /* solana green */
-  --accent-foreground: #0a0910;
-  --accent-soft: rgba(20, 241, 149, 0.16);
+  --secondary: #ffffff;
+  --secondary-foreground: #1c1b22;
+  --muted: #f1eef8;
+  --muted-foreground: #6b6875;
+  --accent: #e9defc; /* soft violet highlight */
+  --accent-foreground: #6d28d9;
+  --accent-soft: #e9defc;
 
-  --destructive: #ff5470;
-  --border: #241f36;
-  --input: #241f36;
-  --ring: #9945ff;
+  --destructive: #c0392b;
+  --border: #e6e2ee;
+  --input: #e6e2ee;
+  --ring: #7c3aed;
 
   --radius: 8px;
 }
@@ -115,13 +115,13 @@
     border-top: 1px solid var(--line);
   }
   .solana-gradient-text {
-    background: linear-gradient(90deg, #9945ff 0%, #14f195 100%);
+    background: linear-gradient(90deg, #7c3aed 0%, #0ea86e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .solana-gradient-bg {
-    background: linear-gradient(135deg, #9945ff 0%, #14f195 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #14f195 100%);
   }
   .solana-glow {
     box-shadow: 0 0 24px rgba(153, 69, 255, 0.35);

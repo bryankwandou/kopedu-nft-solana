@@ -349,7 +349,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
                     <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
                       <path
                         d="M2 5l2 2 4-4"
-                        stroke="#9945ff"
+                        stroke="#7c3aed"
                         strokeWidth="1.6"
                         strokeLinecap="round"
                         strokeLinejoin="round"

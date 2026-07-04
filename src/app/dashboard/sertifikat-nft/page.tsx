@@ -93,7 +93,7 @@ export default function SertifikatNftPage() {
       <div className="mt-4 rounded-lg border border-line bg-card p-6">
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold text-ink">Progres Belajar</p>
-          <p className="font-mono-data text-sm text-accent">
+          <p className="font-mono-data text-sm text-primary">
             {done}/{modules.length} modul
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function SertifikatNftPage() {
         {!allDone && (
           <p className="mt-3 text-xs text-ink-2">
             Selesaikan semua modul untuk membuka mint sertifikat.{" "}
-            <Link href="/dashboard/modul" className="text-accent underline">
+            <Link href="/dashboard/modul" className="text-primary underline">
               Lanjut belajar
             </Link>
           </p>
@@ -115,8 +115,8 @@ export default function SertifikatNftPage() {
 
       <div className="mt-6">
         {mint.status === "done" ? (
-          <div className="rounded-lg border border-accent/40 bg-accent-soft p-6">
-            <p className="font-semibold text-accent">Sertifikat NFT berhasil diterbitkan.</p>
+          <div className="rounded-lg border border-primary/30 bg-accent-soft p-6">
+            <p className="font-semibold text-primary">Sertifikat NFT berhasil diterbitkan.</p>
             <p className="mt-2 break-all font-mono-data text-xs text-ink-2">
               Alamat aset: {mint.asset}
             </p>
@@ -150,12 +150,12 @@ export default function SertifikatNftPage() {
             href="https://faucet.solana.com"
             target="_blank"
             rel="noreferrer"
-            className="text-accent underline"
+            className="text-primary underline"
           >
             faucet.solana.com
           </a>
           . Sertifikat versi cetak tetap tersedia di{" "}
-          <Link href="/sertifikat" className="text-accent underline">
+          <Link href="/sertifikat" className="text-primary underline">
             halaman sertifikat
           </Link>
           .

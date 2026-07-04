@@ -33,7 +33,7 @@ export default function SertifikatPage() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background p-8 text-center">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9945ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <rect x="3" y="11" width="18" height="11" rx="2" />
             <path d="M7 11V7a5 5 0 0110 0v4" />
           </svg>
@@ -75,14 +75,14 @@ export default function SertifikatPage() {
       </div>
 
       {/* Certificate â€” printable area */}
-      <div className="flex min-h-screen items-center justify-center bg-[#0f0d18] p-6 print:min-h-0 print:bg-white print:p-0">
+      <div className="flex min-h-screen items-center justify-center bg-[#f2eff8] p-6 print:min-h-0 print:bg-white print:p-0">
         <div
           id="certificate"
           className="relative w-full max-w-[800px] bg-white shadow-2xl print:shadow-none"
           style={{ aspectRatio: "1.414 / 1" }}
         >
           {/* Outer decorative border */}
-          <div className="absolute inset-3 border-2 border-[#9945ff]/30" />
+          <div className="absolute inset-3 border-2 border-[#7c3aed]/30" />
           <div className="absolute inset-4 border border-[#cdb4ff]" />
 
           {/* Corner ornaments */}
@@ -94,19 +94,19 @@ export default function SertifikatPage() {
           {/* Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center px-12 py-10 text-center">
             {/* Logo */}
-            <div className="mb-3 font-display text-2xl font-black text-[#9945ff]">
+            <div className="mb-3 font-display text-2xl font-black text-[#7c3aed]">
               KopEdu<span className="opacity-50">.</span>
             </div>
 
             {/* Eyebrow */}
-            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[#9945ff]/60">
+            <p className="mb-4 text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[#7c3aed]/60">
               Sertifikat Penyelesaian
             </p>
 
             {/* Divider */}
             <div className="mb-5 flex w-32 items-center gap-2">
               <div className="h-px flex-1 bg-[#cdb4ff]" />
-              <div className="h-1.5 w-1.5 rounded-full bg-[#9945ff]/40" />
+              <div className="h-1.5 w-1.5 rounded-full bg-[#7c3aed]/40" />
               <div className="h-px flex-1 bg-[#cdb4ff]" />
             </div>
 
@@ -123,10 +123,10 @@ export default function SertifikatPage() {
 
             {/* Course badge */}
             <div className="mb-5 rounded border border-[#cdb4ff] bg-[#f6f1ff] px-6 py-3">
-              <p className="font-display text-[0.95rem] font-bold text-[#9945ff]">
+              <p className="font-display text-[0.95rem] font-bold text-[#7c3aed]">
                 Literasi Dasar Koperasi Indonesia
               </p>
-              <p className="mt-0.5 text-[0.65rem] text-[#9945ff]/70">
+              <p className="mt-0.5 text-[0.65rem] text-[#7c3aed]/70">
                 {modules.length} Modul &nbsp;Â·&nbsp; {progress.points} Poin &nbsp;Â·&nbsp; Platform KopEdu
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function SertifikatPage() {
             {/* Divider */}
             <div className="mb-5 flex w-32 items-center gap-2">
               <div className="h-px flex-1 bg-[#cdb4ff]" />
-              <div className="h-1.5 w-1.5 rounded-full bg-[#9945ff]/40" />
+              <div className="h-1.5 w-1.5 rounded-full bg-[#7c3aed]/40" />
               <div className="h-px flex-1 bg-[#cdb4ff]" />
             </div>
 
@@ -147,12 +147,12 @@ export default function SertifikatPage() {
 
               {/* Seal */}
               <div className="flex flex-col items-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#9945ff] bg-[#f6f1ff]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#7c3aed] bg-[#f6f1ff]">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" fill="#9945ff" />
+                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" fill="#7c3aed" />
                   </svg>
                 </div>
-                <p className="mt-1 text-[0.55rem] font-bold uppercase tracking-wider text-[#9945ff]">Verified</p>
+                <p className="mt-1 text-[0.55rem] font-bold uppercase tracking-wider text-[#7c3aed]">Verified</p>
               </div>
 
               <div className="text-right">
@@ -183,7 +183,7 @@ function Ornament({ className }: { className?: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className={className}>
       <path d="M2 2 L14 2 L2 14 Z" fill="#cdb4ff" opacity="0.8" />
-      <path d="M2 2 L8 2 L2 8 Z" fill="#9945ff" opacity="0.5" />
+      <path d="M2 2 L8 2 L2 8 Z" fill="#7c3aed" opacity="0.5" />
     </svg>
   );
 }
