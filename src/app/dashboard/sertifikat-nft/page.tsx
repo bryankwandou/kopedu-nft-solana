@@ -78,7 +78,10 @@ export default function SertifikatNftPage() {
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-xs text-ink-2">Dompet Solana</p>
-            <p className="mt-1 font-mono-data text-sm text-ink">
+            <p
+              className="mt-1 font-mono-data text-sm text-ink"
+              title={wallet.publicKey ? wallet.publicKey.toBase58() : undefined}
+            >
               {wallet.publicKey
                 ? wallet.publicKey.toBase58().slice(0, 4) +
                   "…" +
@@ -124,7 +127,7 @@ export default function SertifikatNftPage() {
               href={`https://explorer.solana.com/address/${mint.asset}?cluster=devnet`}
               target="_blank"
               rel="noreferrer"
-              className="mt-3 inline-flex h-9 items-center rounded-sm bg-primary px-5 text-sm font-semibold text-primary-foreground hover:bg-[#7a2ff2]"
+              className="mt-3 inline-flex h-9 items-center rounded-sm bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors duration-100 hover:bg-[#7a2ff2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Lihat di Solana Explorer
             </a>
@@ -133,7 +136,8 @@ export default function SertifikatNftPage() {
           <button
             onClick={handleMint}
             disabled={!allDone || !wallet.publicKey || mint.status === "minting"}
-            className="solana-gradient-bg solana-glow inline-flex h-11 w-full items-center justify-center rounded-sm text-sm font-semibold text-white disabled:opacity-40 disabled:shadow-none"
+            aria-busy={mint.status === "minting"}
+            className="solana-gradient-bg solana-glow inline-flex h-11 w-full items-center justify-center rounded-sm text-sm font-semibold text-white transition-transform duration-100 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0 disabled:pointer-events-none disabled:translate-y-0 disabled:opacity-40 disabled:shadow-none"
           >
             {mint.status === "minting"
               ? "Menerbitkan di blockchain…"

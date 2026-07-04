@@ -39,9 +39,12 @@ export function Navbar() {
         <nav className="container-edge flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="font-display text-xl font-bold tracking-tight text-ink"
+            className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-ink"
           >
             KopEdu<span className="text-primary">.</span>
+            <span className="solana-gradient-bg rounded-full px-2 py-0.5 font-sans text-[0.6rem] font-bold uppercase tracking-wider text-white">
+              Web3
+            </span>
           </Link>
 
           <ul className="hidden items-center gap-8 md:flex">

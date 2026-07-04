@@ -18,8 +18,8 @@ export function Footer() {
                 KopEdu<span className="text-primary">.</span>
               </Link>
               <p className="mt-3 max-w-[28ch] text-sm text-ink-2">
-                Platform edukasi koperasi untuk generasi muda Indonesia. Dibangun
-                oleh tim GotongDigital.
+                Platform edukasi koperasi dengan sertifikat NFT on-chain di
+                Solana. Dibangun oleh tim GotongDigital.
               </p>
             </div>
 
@@ -42,6 +42,11 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link className="hover:text-ink" href="/dashboard/sertifikat-nft">
+                    Sertifikat NFT
+                  </Link>
+                </li>
+                <li>
                   <Link className="hover:text-ink" href="/daftar">
                     Daftar Gratis
                   </Link>
@@ -53,7 +58,9 @@ export function Footer() {
               <h4 className="eyebrow mb-4">Kontak</h4>
               <div className="flex flex-col items-start gap-2 text-sm text-ink-2">
                 <Link001 href="mailto:halo@kopedu.id">halo@kopedu.id</Link001>
-                <Link001 href="https://github.com">github.com/GotongDigital</Link001>
+                <Link001 href="https://github.com/nayrbryanGaming/kopedu-nft-solana">
+                  github.com/nayrbryanGaming/kopedu-nft-solana
+                </Link001>
                 <span className="font-mono-data text-xs">
                   Hackathon Kemenkop RI 2026 — Pilar 4
                 </span>

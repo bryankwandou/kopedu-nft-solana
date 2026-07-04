@@ -28,9 +28,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="eyebrow mb-5"
+            className="eyebrow mb-5 flex items-center gap-2"
           >
-            Belajar Koperasi untuk Pelajar Indonesia
+            Belajar Koperasi
+            <span aria-hidden>·</span>
+            <span className="solana-gradient-text font-bold">Sertifikat NFT di Solana</span>
           </motion.p>
 
           <h1 className="font-display text-[clamp(2rem,3.4vw,3.2rem)] font-black leading-[1.1] tracking-tight text-ink">
@@ -48,8 +50,10 @@ export function HeroSection() {
             className="mt-6 max-w-[44ch] text-[1.0625rem] leading-relaxed text-ink-2"
           >
             Dari nol sampai paham betul lewat modul singkat, kuis langsung, dan
-            asisten AI yang siap menjawab dalam bahasa kamu. Gratis, dan setiap
-            langkah memberi poin.
+            asisten AI yang siap menjawab dalam bahasa kamu. Rampungkan semua
+            modul, lalu terbitkan sertifikatmu sendiri sebagai NFT di jaringan
+            Solana — bukti belajar yang permanen dan bisa diverifikasi siapa
+            pun.
           </motion.p>
 
           <motion.div
@@ -91,7 +95,7 @@ export function HeroSection() {
               <strong className="font-mono-data text-ink">14</strong> modul
             </span>
             <span aria-hidden>·</span>
-            <span>Sertifikat digital</span>
+            <span>Sertifikat NFT on-chain</span>
           </motion.div>
         </div>
 

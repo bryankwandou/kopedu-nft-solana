@@ -34,14 +34,18 @@ if (Number(bal.basisPoints) < 5_000_000) {
   }
 }
 
+const nama = process.env.CERT_NAMA || "Uji Workflow KopEdu";
+const certId = process.env.CERT_ID || "KPED-PROOF00001";
+const modulCount = process.env.CERT_MODUL || "14";
+
 const asset = generateSigner(umi);
-const uri =
-  "https://kopedu-nft-solana.vercel.app/api/nft-metadata?nama=Uji%20Workflow%20KopEdu&cert=KPED-PROOF00001&modul=14";
+const uri = `https://kopedu-nft-solana.vercel.app/api/nft-metadata?nama=${encodeURIComponent(nama)}&cert=${encodeURIComponent(certId)}&modul=${modulCount}`;
 
 console.log("Mint aset Metaplex Core...");
+console.log("Nama pemilik:", nama, "| ID Sertifikat:", certId);
 const res = await create(umi, {
   asset,
-  name: "Sertifikat KopEdu — KPED-PROOF00001",
+  name: `Sertifikat KopEdu — ${certId}`,
   uri,
 }).sendAndConfirm(umi);
 

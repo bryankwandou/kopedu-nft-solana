@@ -26,8 +26,13 @@ const features = [
   },
   {
     num: "03",
-    title: "Poin & Sertifikat",
-    desc: "Tiap modul yang kamu selesaikan menghasilkan poin. Rampungkan semua dan kamu mendapat sertifikat digital yang bisa dipasang di profil profesional.",
+    title: "Poin & Progres",
+    desc: "Tiap modul yang kamu selesaikan menghasilkan poin. Progresmu tersimpan otomatis, jadi kamu bisa lanjut belajar dari perangkat mana pun.",
+  },
+  {
+    num: "04",
+    title: "Sertifikat NFT di Solana",
+    desc: "Rampungkan semua modul, lalu mint sertifikatmu sendiri sebagai NFT langsung dari dompet Phantom atau Solflare. Tersimpan permanen di blockchain — siapa pun bisa memverifikasi keasliannya tanpa perlu mempercayai penerbitnya.",
   },
 ];
 
@@ -56,8 +61,12 @@ const faqs = [
     a: "Tidak perlu. Materi disusun dari titik nol — kamu tidak diasumsikan tahu apa pun sebelumnya. Tiap langkah mengantar ke langkah berikutnya.",
   },
   {
-    q: "Sertifikat digitalnya seperti apa?",
-    a: "Setelah semua modul tuntas, kamu bisa mengunduh sertifikat resmi KopEdu. Cocok untuk dilampirkan ke portofolio atau profil karier.",
+    q: "Sertifikat NFT-nya seperti apa?",
+    a: "Setelah semua modul tuntas, kamu mint sertifikatmu sendiri sebagai NFT (Metaplex Core) di jaringan Solana, langsung dari dompetmu — bukan diterbitkan platform. Sertifikat ini tersimpan permanen di blockchain dan bisa diverifikasi siapa pun lewat Solana Explorer, tidak bisa dipalsukan atau hilang. Versi cetak (PDF) tetap tersedia bagi yang belum punya dompet crypto.",
+  },
+  {
+    q: "Perlu dompet Solana untuk belajar?",
+    a: "Tidak untuk belajar — modul, kuis, dan KopBot bisa diakses tanpa dompet. Dompet (Phantom atau Solflare) baru dibutuhkan saat kamu ingin mint sertifikat NFT setelah menyelesaikan semua modul.",
   },
 ];
 
