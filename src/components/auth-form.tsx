@@ -146,7 +146,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
         </div>
 
         <p className="relative font-mono-data text-[11px] text-primary-foreground/40">
-          GotongDigital â€” Hackathon Kemenkop RI 2026
+          GotongDigital — Hackathon Kemenkop RI 2026
         </p>
       </div>
 
@@ -181,7 +181,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
             </p>
           </motion.div>
 
-          {/* Google â€” disabled, coming soon */}
+          {/* Google — disabled, coming soon */}
           <motion.button
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}

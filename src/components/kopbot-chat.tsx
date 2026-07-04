@@ -226,7 +226,7 @@ export function KopbotChat() {
 
     setInput("");
 
-    // Ensure there's an active session â€” create one inline if needed
+    // Ensure there's an active session — create one inline if needed
     let sessionId = activeId;
     let baseMessages: StoredMsg[] = activeSession?.messages ?? [];
 
@@ -242,7 +242,7 @@ export function KopbotChat() {
     const isFirst = baseMessages.filter((m) => m.role === "user").length === 0;
     const title = isFirst
       ? trimmed.length > 44
-        ? trimmed.slice(0, 44) + "â€¦"
+        ? trimmed.slice(0, 44) + "…"
         : trimmed
       : undefined;
 
@@ -371,7 +371,7 @@ export function KopbotChat() {
               >
                 <p className="text-sm leading-relaxed text-ink">
                   Halo. Aku KopBot, asisten edukasi koperasi. Tanyakan apa saja
-                  tentang koperasi â€” mulai dari dasar-dasar, Koperasi Desa Merah Putih,
+                  tentang koperasi — mulai dari dasar-dasar, Koperasi Desa Merah Putih,
                   simpan pinjam, SHU, hingga cara mendirikan koperasi.
                 </p>
               </motion.div>

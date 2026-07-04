@@ -54,7 +54,7 @@ export default function SertifikatPage() {
 
   return (
     <>
-      {/* Print button â€” hidden when printing */}
+      {/* Print button — hidden when printing */}
       <div className="flex items-center justify-between border-b border-line bg-card px-6 py-3 print:hidden">
         <Link href="/dashboard/profil" className="text-sm font-medium text-ink-2 hover:text-ink">
           â† Kembali ke Profil
@@ -74,7 +74,7 @@ export default function SertifikatPage() {
         </div>
       </div>
 
-      {/* Certificate â€” printable area */}
+      {/* Certificate — printable area */}
       <div className="flex min-h-screen items-center justify-center bg-[#f2eff8] p-6 print:min-h-0 print:bg-white print:p-0">
         <div
           id="certificate"
@@ -127,7 +127,7 @@ export default function SertifikatPage() {
                 Literasi Dasar Koperasi Indonesia
               </p>
               <p className="mt-0.5 text-[0.65rem] text-[#7c3aed]/70">
-                {modules.length} Modul &nbsp;Â·&nbsp; {progress.points} Poin &nbsp;Â·&nbsp; Platform KopEdu
+                {modules.length} Modul &nbsp;·&nbsp; {progress.points} Poin &nbsp;·&nbsp; Platform KopEdu
               </p>
             </div>
 
@@ -163,7 +163,7 @@ export default function SertifikatPage() {
 
             {/* Attribution */}
             <p className="mt-4 text-[0.58rem] text-[#aaa]">
-              GotongDigital â€” Hackathon Kemenkop RI 2026 &nbsp;Â·&nbsp; kopedu.vercel.app
+              GotongDigital — Hackathon Kemenkop RI 2026 &nbsp;·&nbsp; kopedu.vercel.app
             </p>
           </div>
         </div>

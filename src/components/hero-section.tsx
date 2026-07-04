@@ -86,11 +86,11 @@ export function HeroSection() {
               </strong>{" "}
               pelajar
             </span>
-            <span aria-hidden>Â·</span>
+            <span aria-hidden>·</span>
             <span>
               <strong className="font-mono-data text-ink">14</strong> modul
             </span>
-            <span aria-hidden>Â·</span>
+            <span aria-hidden>·</span>
             <span>Sertifikat digital</span>
           </motion.div>
         </div>

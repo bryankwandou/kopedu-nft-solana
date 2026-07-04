@@ -55,7 +55,7 @@ function ProfileForm() {
     const e: Record<string, string> = {};
     if (!form.firstName.trim()) e.firstName = "Nama depan wajib diisi.";
     if (form.username.trim() && !/^[a-z0-9_]{3,20}$/.test(form.username.trim())) {
-      e.username = "3â€“20 karakter: huruf kecil, angka, atau garis bawah.";
+      e.username = "3–20 karakter: huruf kecil, angka, atau garis bawah.";
     }
     if (form.bio.length > 160) e.bio = `Terlalu panjang (${form.bio.length}/160).`;
     return e;

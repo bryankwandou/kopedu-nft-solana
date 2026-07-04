@@ -138,7 +138,7 @@ export function LessonView({ id }: { id: number }) {
               <span className="font-semibold text-primary">{solvedCount}</span>
               {" "}dari{" "}
               <span className="font-semibold">{totalQuizzes}</span>
-              {" "}latihan selesai â€” jawab semua untuk melanjutkan
+              {" "}latihan selesai — jawab semua untuk melanjutkan
             </p>
           )}
           <div className="flex items-center justify-between">
