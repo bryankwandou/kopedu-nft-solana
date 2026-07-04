@@ -1,0 +1,10 @@
+{
+  "name": "KopEdu — Sertifikat Literasi Koperasi",
+  "symbol": "KOPEDU",
+  "description": "Koleksi sertifikat kelulusan on-chain untuk pelajar yang menyelesaikan kurikulum Literasi Dasar Koperasi Indonesia di platform KopEdu. Setiap sertifikat diterbitkan sebagai NFT (Metaplex Core) di jaringan Solana dan dapat diverifikasi siapa pun.",
+  "image": "https://kopedu-nft-solana.vercel.app/nft-sertifikat.svg",
+  "external_url": "https://kopedu-nft-solana.vercel.app",
+  "properties": {
+    "category": "image"
+  }
+}

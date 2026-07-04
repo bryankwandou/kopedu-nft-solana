@@ -19,6 +19,21 @@ export async function ensureSchema() {
   `;
 }
 
+export async function ensureCertificatesTable() {
+  if (!hasDatabase) return;
+  const sql = getDb();
+  await sql`
+    CREATE TABLE IF NOT EXISTS kopedu_certificates (
+      user_id        TEXT PRIMARY KEY,
+      asset_address  TEXT NOT NULL,
+      wallet_address TEXT NOT NULL,
+      full_name      TEXT NOT NULL,
+      cert_id        TEXT NOT NULL,
+      minted_at      TIMESTAMPTZ DEFAULT NOW()
+    )
+  `;
+}
+
 export async function ensureUsersTable() {
   if (!hasDatabase) return;
   const sql = getDb();
